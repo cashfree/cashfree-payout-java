@@ -6,7 +6,6 @@ public class execute{
 }
 
     public static void main(String[] args) {
-        System.out.println("TELST");
         
         execute example = new execute();
 
