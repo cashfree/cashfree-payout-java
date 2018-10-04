@@ -55,7 +55,7 @@ Report it at [https://github.com/cashfree/cashfree_payout_java/issues](https://g
 
 # Support
 
-For further queries, reach us at techsupport@gocashfree.com .
+For further queries, reach us at techsupport@cashfree.com .
 
 ********************************************************************************** 
 
