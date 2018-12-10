@@ -1,11 +1,11 @@
 #  Cashfree Java Payout Integration 
 
-Java bindings for interacting with the Cashfree API for AutoCollect. This is useful for merchants who are looking to automate their bank transfers programatically. 
+Java bindings for interacting with the Cashfree API for Payout. This is useful for merchants who are looking to automate their bank transfers programatically. 
 
 # Using 
 
 As you can see there are two files. "execute.java" is a guide to calling the API. <br />
-NOTE : Ensure that "execute.java" and "cfAutoCollect.java" are in the same project.
+NOTE : Ensure that "execute.java" and "cashfreeUser.java" are in the same project.
 
 # Setting Up
 
