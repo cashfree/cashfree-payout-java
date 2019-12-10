@@ -7,11 +7,11 @@ This kit is linked to the standard transfer flow. Go [here](https://dev.cashfree
 ## Functionalities
 
 The following kit contains the following functionalities:
-    1. [getToken](https://dev.cashfree.com/api-reference/payouts-api#authorise): to get auth token to be used in all          following calls.
-    2. [getBeneficiary](https://dev.cashfree.com/api-reference/payouts-api#get-beneficiary-details): to get beneficiary details/check if a beneficiary exists.
-    3. [createBeneficiaryEntity](https://dev.cashfree.com/api-reference/payouts-api#create-beneficiary): to create beneficiaries.
-    4. [requestTransfer](https://dev.cashfree.com/api-reference/payouts-api#standard-transfer): to create a payout transfer.
-    5. [getTransferStatus](https://dev.cashfree.com/api-reference/payouts-api#get-transfer-status): to get payout transfer status.
+    * [getToken](https://dev.cashfree.com/api-reference/payouts-api#authorise): to get auth token to be used in all          following calls.
+    * [getBeneficiary](https://dev.cashfree.com/api-reference/payouts-api#get-beneficiary-details): to get beneficiary details/check if a beneficiary exists.
+    * [createBeneficiaryEntity](https://dev.cashfree.com/api-reference/payouts-api#create-beneficiary): to create beneficiaries.
+    * [requestTransfer](https://dev.cashfree.com/api-reference/payouts-api#standard-transfer): to create a payout transfer.
+    * [getTransferStatus](https://dev.cashfree.com/api-reference/payouts-api#get-transfer-status): to get payout transfer status.
 
 ## Build Steps
 
