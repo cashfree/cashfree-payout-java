@@ -1,8 +1,10 @@
 # Cashfree Payout Integration Kit for Java
 
 Below is an integration flow on how to use Cashfree's payouts.
-Please go through the payout docs here: https://docs.cashfree.com/docs/payout/guide/
+Please go through the payout docs [here](https://docs.cashfree.com/docs/payout/guide/)
+<br/>
 This kit is linked to the standard transfer flow. Go [here](https://dev.cashfree.com/payouts/integrations/standard-transfer) to get a better understanding.
+<br/>
 
 ## Functionalities
 
@@ -32,7 +34,7 @@ The following kit uses information stored in a config file. Before running the c
 and add the relevant details:
   1. ClientId: This is a unique Identifier that identifies the merchant. For more information please go [here](https://dev.cashfree.com/payouts/integrations/pre-requisites#credentials).
   2. ClientSecret: Corresponding secret key for the given ClientId that helps Cashfree indentify the merchant. For more information please go [here](https://dev.cashfree.com/payouts/integrations/pre-requisites#credentials).
-  3. Enverionment: Enviornment to be hit. The following values are accepted prod: for production, test: for test enviornment.
+  3. Environment: Enviornment to be hit. The following values are accepted prod: for production, test: for test enviornment.
 
 ### IP Whitelisting:
 
