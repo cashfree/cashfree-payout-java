@@ -34,7 +34,7 @@ and add the relevant details:
 
 Your IP has to be whitelisted to hit Cashfree's server. For more information please go [here](https://dev.cashfree.com/payouts/integrations/pre-requisites#ip).
 
-###Beneficiary:
+### Beneficiary:
 The following kit needs beneficiary details in order to check if the beneficary exists and if it does not exist, 
 create a beneficiary for the payout transfer. For more information on Beneficiaries please go [here](https://dev.cashfree.com/payouts/integrations/standard-transfer#beneficiary)
 
@@ -51,7 +51,7 @@ Sample Fields to add a beneficiary using bankAccount and ifsc:
   9. state: beneficiary state.
   10. pincode: beneficiary pincode.
   
-###transferDetails:
+### transferDetails:
 To request a payout transfer certain information is needed. To get a better understanding on requesting a transfer go [here](https://dev.cashfree.com/api-reference/payouts-api#standard-transfer).
 
 Required Fields are:
@@ -60,14 +60,14 @@ Required Fields are:
   3. trasnferId: unique transfer id to indentify the transfer.
 
 
-##Usage
+## Usage
 
 Once the config file is setup you can run the executable, to run the entire flow. Authorise, check and add beneficiary, 
 request for a payout transfer and get the transfer status.
 
 You can change the necessary values in the config file as per your requirements and re run the script whenever needed.
 
-##Doubts
+## Doubts
 
 Reach out to techsupport@cashfree.com in case of doubts.
  
