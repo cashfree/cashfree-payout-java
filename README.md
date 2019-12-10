@@ -7,11 +7,11 @@ This kit is linked to the standard transfer flow. Go [here](https://dev.cashfree
 ## Functionalities
 
 The following kit contains the following functionalities:
-    1.[getToken](https://dev.cashfree.com/api-reference/payouts-api#authorise) -> to get auth token to be used in all following calls.
-    2.[getBeneficiary](https://dev.cashfree.com/api-reference/payouts-api#get-beneficiary-details) -> to get beneficiary details/check if a beneficiary exists.
-    3.[createBeneficiaryEntity](https://dev.cashfree.com/api-reference/payouts-api#create-beneficiary) -> to create beneficiaries.
-    4.[requestTransfer](https://dev.cashfree.com/api-reference/payouts-api#standard-transfer) -> to create a payout transfer.
-    5.[getTransferStatus](https://dev.cashfree.com/api-reference/payouts-api#get-transfer-status) -> to get payout transfer status.
+    1. [getToken](https://dev.cashfree.com/api-reference/payouts-api#authorise) -> to get auth token to be used in all following calls.
+    2. [getBeneficiary](https://dev.cashfree.com/api-reference/payouts-api#get-beneficiary-details) -> to get beneficiary details/check if a beneficiary exists.
+    3. [createBeneficiaryEntity](https://dev.cashfree.com/api-reference/payouts-api#create-beneficiary) -> to create beneficiaries.
+    4. [requestTransfer](https://dev.cashfree.com/api-reference/payouts-api#standard-transfer) -> to create a payout transfer.
+    5. [getTransferStatus](https://dev.cashfree.com/api-reference/payouts-api#get-transfer-status) -> to get payout transfer status.
 
 ## Build Steps
 
@@ -30,7 +30,7 @@ and add the relevant details:
   2. ClientSecret: Corresponding secret key for the given ClientId that helps Cashfree indentify the merchant. For more information please go [here](https://dev.cashfree.com/payouts/integrations/pre-requisites#credentials).
   3. Enverionment: Enviornment to be hit. The following values are accepted prod: for production, test: for test enviornment.
 
-###IP Whitelisting:
+### IP Whitelisting:
 
 Your IP has to be whitelisted to hit Cashfree's server. For more information please go [here](https://dev.cashfree.com/payouts/integrations/pre-requisites#ip).
 
