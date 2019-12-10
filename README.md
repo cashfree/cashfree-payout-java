@@ -25,7 +25,7 @@ follow the following build steps to compile the Integration kit:
       ```
       javac -cp .:json-simple-1.1.1.jar Main.java
       ```
-      The code has a dependency on json simple for json parsing. Include this in your class path while building(Hence -cp .:son-simple-1.1.1.jar 
+      The code has a dependency on json simple for json parsing. Include this in your class path while building(Hence -cp .:json-simple-1.1.1.jar 
       to include the jar in the class path).
 ## Set Up
 
