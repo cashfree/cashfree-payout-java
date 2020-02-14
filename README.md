@@ -32,13 +32,13 @@ follow the following build steps to compile the Integration kit:
 ### Pre Requisites:
 The following kit uses information stored in a config file. Before running the code for the first time open the config.json file
 and add the relevant details:
-  1. ClientId: This is a unique Identifier that identifies the merchant. For more information please go [here](https://dev.cashfree.com/payouts/integrations/pre-requisites#credentials).
-  2. ClientSecret: Corresponding secret key for the given ClientId that helps Cashfree indentify the merchant. For more information please go [here](https://dev.cashfree.com/payouts/integrations/pre-requisites#credentials).
+  1. ClientId: This is a unique Identifier that identifies the merchant. For more information please go [here](https://dev.cashfree.com/development/api/credentials).
+  2. ClientSecret: Corresponding secret key for the given ClientId that helps Cashfree indentify the merchant. For more information please go [here](https://dev.cashfree.com/development/api/credentials).
   3. Environment: Enviornment to be hit. The following values are accepted prod: for production, test: for test enviornment.
 
 ### IP Whitelisting:
 
-Your IP has to be whitelisted to hit Cashfree's server. For more information please go [here](https://dev.cashfree.com/payouts/integrations/pre-requisites#ip).
+Your IP has to be whitelisted to hit Cashfree's server. For more information please go [here](https://dev.cashfree.com/development/api/ip-whitelisting).
 
 ### Beneficiary:
 The following kit needs beneficiary details in order to check if the beneficary exists and if it does not exist, 
