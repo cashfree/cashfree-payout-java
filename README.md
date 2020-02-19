@@ -70,6 +70,8 @@ Required Fields are:
 
 Once the config file is setup you can run the executable, to run the entire flow. Authorize, check and add beneficiary, 
 request for a payout transfer and get the transfer status.
+
+Run the following command in the terminal to run the executable:
 ```
       javac -cp .:json-simple-1.1.1.jar Main.java
 ```
