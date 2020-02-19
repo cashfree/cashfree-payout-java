@@ -12,7 +12,7 @@ The following kit contains the following functionalities:
     <ol>
     <li> [getToken](https://dev.cashfree.com/api-reference/payouts-api#authorise): to get the auth token to be used in all          following calls.
     <li> [getBeneficiary](https://dev.cashfree.com/api-reference/payouts-api#get-beneficiary-details): to get beneficiary details/check if a beneficiary exists.
-    <li> [createBeneficiaryEntity](https://dev.cashfree.com/api-reference/payouts-api#create-beneficiary): to create beneficiaries.
+    <li> [createBeneficiaryEntity](https://dev.cashfree.com/api-reference/payouts-api#add-beneficiary): to create beneficiaries.
     <li> [requestTransfer](https://dev.cashfree.com/api-reference/payouts-api#standard-transfer): to create a payout transfer.
     <li> [getTransferStatus](https://dev.cashfree.com/api-reference/payouts-api#get-transfer-status): to get payout transfer status.
     </ol>
@@ -44,7 +44,7 @@ Your IP has to be whitelisted to hit Cashfree's server. For more information ple
 The following kit needs beneficiary details in order to check if the beneficiary exists and if it does not exist, 
 create a beneficiary for the payout transfer. For more information on Beneficiaries please go [here](https://dev.cashfree.com/api-reference/payouts-api#beneficiary)
 
-The kit reads beneficiary details from the config file. Under the beneDetails section. For a list of required fields go [here](https://dev.cashfree.com/api-reference/payouts-api#create-beneficiary).
+The kit reads beneficiary details from the config file. Under the beneDetails section. For a list of required fields go [here](https://dev.cashfree.com/api-reference/payouts-api#add-beneficiary).
 Sample Fields to add a beneficiary using bankAccount and ifsc:
   1. beneId: uniqueId of the created beneficiary.
   2. name: beneficiary name.
