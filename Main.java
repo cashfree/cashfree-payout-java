@@ -1,6 +1,6 @@
 /*
 Below is an integration flow on how to use Cashfree's payouts.
-Please go through the payout docs here: https://docs.cashfree.com/docs/payout/guide/
+Please go through the payout docs here: https://dev.cashfree.com/payouts
 
 The following script contains the following functionalities :
     1.getToken() -> to get auth token to be used in all following calls.
