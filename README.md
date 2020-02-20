@@ -50,7 +50,7 @@ Sample Fields to add a beneficiary using bankAccount and ifsc:
   2. name: beneficiary name.
   3. email: beneficiary email.
   4. phone: beneficiary phone.
-  5. bankAccount: beneficiary's bank account.
+  5. bankAccount: beneficiary bank account.
   6. ifsc: corresponding ifsc.
   7. address1: beneficiary address.
   8. city: beneficiary city.
