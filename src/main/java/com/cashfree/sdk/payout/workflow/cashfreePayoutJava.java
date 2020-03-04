@@ -36,7 +36,7 @@ import com.cashfree.lib.logger.VerySimpleFormatter;
 public class cashfreePayoutJava {
   private static final Logger log = Logger.getLogger(cashfreePayoutJava.class.getName());
 
-  static {
+  public cashfreePayoutJava() {
     ConsoleHandler consoleHandler = new ConsoleHandler();
     consoleHandler.setFormatter(new VerySimpleFormatter());
     log.addHandler(consoleHandler);
@@ -45,58 +45,72 @@ public class cashfreePayoutJava {
   public static void main(String[] args) {
     Payouts payouts =
         Payouts.getInstance(
-            Environment.PRODUCTION,
-            "CF1848EZPSGLHWP9IUE2Y",
-            "b8df7784dd3f38911294d3597764dd43f3016a48");
+            Environment.TEST,
+                "CF27JBMB8GN4CHAQI6Q",
+                "fd48e5a6084d611e4fd9c6f0f8fcbca16d221ace");
     log.info("" + payouts.init());
     log.info("payouts initialized");
     boolean isTokenValid = payouts.verifyToken();
     if (!isTokenValid) return;
+
     log.info("Token is valid");
+
+
     Beneficiary beneficiary = new Beneficiary(payouts);
-    log.info("Trying to fetch beneficiary based on beneId");
+    BeneficiaryDetails beneficiaryDetails=new BeneficiaryDetails();
+    boolean  flag=false;
+
     try {
-      log.info("" + beneficiary.getBeneficiaryDetails("JOHN18012"));
-      log.info("" + beneficiary.getBeneficiaryId("00001111222233", "HDFC0000001"));
+      log.info("Trying to fetch beneficiary based on beneId");
+      log.info("" + beneficiary.getBeneficiaryDetails("VENKY_HDFW"));
+      beneficiaryDetails=beneficiary.getBeneficiaryDetails("VENKY_HDFW");
     } catch (ResourceDoesntExistException x) {
-      log.warning(x.getMessage());
+
+          log.warning(x.getMessage());
+          log.info("Trying to fetch beneficiary based on account details");
+          try{
+            log.info("" + beneficiary.getBeneficiaryId("000100289877623", "SBIN0008752"));
+            String beneId=beneficiary.getBeneficiaryId("000100289877623", "SBIN0008752");
+            beneficiaryDetails=beneficiary.getBeneficiaryDetails(beneId);
+            log.info(beneficiaryDetails.toString());
+          } catch (ResourceDoesntExistException y) {
+            log.warning(y.getMessage());
+            flag=true;
+          }
     }
 
-    log.info("Beneficiary not found so Adding Beneficiary details");
+    if (flag == true) {
+      log.info("Beneficiary not found so Adding Beneficiary details");
 
-    BeneficiaryDetails beneficiaryDetails =
-        new BeneficiaryDetails()
-            .setBeneId("JOHN18014")
-            .setName("john doe")
-            .setEmail("johndoe@cashfree.com")
-            .setPhone("9876543210")
-            .setBankAccount("00001111222233")
-            .setIfsc("HDFC0000001")
-            .setAddress1("ABC Street")
-            .setCity("Bangalore")
-            .setState("Karnataka")
-            .setPincode("560001");
-
-    try {
-      log.info("" + beneficiary.addBeneficiary(beneficiaryDetails));
-    } catch (ResourceAlreadyExistsException x) {
-      log.warning(x.getMessage());
+       beneficiaryDetails =
+          new BeneficiaryDetails()
+              .setBeneId("bank_success")
+              .setName("bsuccess")
+              .setEmail("suneel@cashfree.com")
+              .setPhone("7709736537")
+              .setBankAccount("000100289877623")
+              .setIfsc("SBIN0008752")
+              .setAddress1("Bangalore")
+              .setCity("Bangalore")
+              .setState("Karnataka")
+              .setPincode("560001");
+    //  beneId=bank_success, name=bsuccess, email=suneel@cashfree.com, phone=7709736537, bankAccount=000100289877623, ifsc=SBIN0008752, address1=Bangalore, city=, state=, pincode=0)
+      try {
+        log.info("" + beneficiary.addBeneficiary(beneficiaryDetails));
+        log.info("Beneficiary added");
+      } catch (ResourceAlreadyExistsException x) {
+        log.warning(x.getMessage());
+      }
     }
 
-    try {
-      log.info("" + beneficiary.getBeneficiaryDetails("JOHN18012"));
-      log.info("" + beneficiary.getBeneficiaryId("00001111222233", "HDFC0000001"));
-    } catch (ResourceDoesntExistException x) {
-      log.warning(x.getMessage());
-    }
 
-    log.info("After adding beneficiary calling request transfer");
-
+    log.info("initiating Transfer Request");
     Transfers transfers = new Transfers(payouts);
-    String transferId = "javasdktesttransferid" + ThreadLocalRandom.current().nextInt(0, 1000000);
+    String transferId = "javasdktesdtransferid" + ThreadLocalRandom.current().nextInt(0, 1000000);
+
     RequestTransferRequest request =
         new RequestTransferRequest()
-            .setBeneId("VENKY_HDFC")
+            .setBeneId(beneficiaryDetails.getBeneId())
             .setAmount(new BigDecimal("1.00"))
             .setTransferId(transferId);
     try {
@@ -112,7 +126,8 @@ public class cashfreePayoutJava {
       log.warning(x.getMessage());
     }
 
-    log.info("Getting the Transfers");
+    log.info("Getting the Transfer Details");
     log.info("" + transfers.getTransfers(10, null, null));
+   // beneficiary.removeBeneficiary(beneficiaryDetails.getBeneId());
   }
 }
