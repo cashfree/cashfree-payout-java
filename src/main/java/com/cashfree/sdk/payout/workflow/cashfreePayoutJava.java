@@ -46,8 +46,8 @@ public class cashfreePayoutJava {
     Payouts payouts =
         Payouts.getInstance(
             Environment.TEST,
-                "CF27JBMB8GN4CHAQI6Q",
-                "fd48e5a6084d611e4fd9c6f0f8fcbca16d221ace");
+                "",
+                "");
     log.info("" + payouts.init());
     log.info("payouts initialized");
     boolean isTokenValid = payouts.verifyToken();
